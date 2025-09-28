@@ -6,14 +6,14 @@ import urlparse
 import code
 import oauth2 as oauth
 
-yaml_path = os.path.expanduser('~') + '/.tumblr'
+yaml_path = './tumblr.info'
 
-if not os.path.exists(yaml_path):
-    tokens = new_oauth(yaml_path)
-else:
-    yaml_file = open(yaml_path, "r")
-    tokens = yaml.safe_load(yaml_file)
-    yaml_file.close()
+#if not os.path.exists(yaml_path):
+#    tokens = new_oauth(yaml_path)
+#else:
+yaml_file = open(yaml_path, "r")
+tokens = yaml.safe_load(yaml_file)
+yaml_file.close()
 
 client = pytumblr.TumblrRestClient(
     tokens['consumer_key'],
