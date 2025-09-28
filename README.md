@@ -7,6 +7,7 @@ Currently accepts no arguments and contains debug code. Outputs one username per
 
 
 Clone to anywhere you like, create a file named tumblr.info in your home directory
+
 tumblr.info is a yaml file and should contain the following:
 
     consumer_key: your_api_consumer_key
